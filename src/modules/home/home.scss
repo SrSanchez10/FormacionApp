@@ -1,0 +1,23 @@
+.home {
+  background-color: white;
+  flex: 1;
+  overflow-y: auto;
+  &__list {
+    flex: 1;
+    overflow-y: auto;
+  }
+  .walk_detail_control {
+    position: sticky;
+    bottom: 0;
+    margin: 0px 8px 0px 8px;
+  }
+  .button {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    height: 40px;
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+  }
+}
