@@ -1,34 +1,30 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import SearchBar from '../../components/searchBar/SearchBar';
+import ListCourses from '../../components/listCourses/ListCourses';
 import './home.scss';
 
-/*function Home(props) {
+function Home(props) {
+
+  const { userInfo } = props;
+  const cursos = [{ nombre: 'React', plazas: '12', duracion: '24', fecha: '22/09/2020' }, { nombre: 'React', plazas: '12', duracion: '24', fecha: '22/09/2020' }];
+
   return (
     <div className="home">
-      <div className="home__list">
-        Hola mundo
-        <div className="home item">Item</div>
-      </div>
+      <SearchBar />
+      {userInfo.rol === 'admin' && (<button className="button">Añadir curso +</button>)}
+      {cursos.map((item, i) => (
+        <ListCourses key={i} elements={item} />
+      ))}
+
     </div>
   );
-} */
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      itemsVisible: false
-    };
-  }
-
-
-  render() {
-    return (
-      <div className="home">
-        <h1> Estas en el Home </h1>
-      </div>
-    );
-  }
 }
 
-export default Home;
+export default connect(
+  store => ({
+    userInfo: store.login.userInfo
+  }),
+  null
+)(Home);
