@@ -32,7 +32,8 @@ function App(props) {
             )}
           </Route>
           <PrivateRoute path="/" exact={true}>
-            <Home />
+            <Home
+              userInfo={userInfo} />
           </PrivateRoute>
           <Route path="/not-allowed">
             <div>No tienes permisos para ver esta ruta</div>
