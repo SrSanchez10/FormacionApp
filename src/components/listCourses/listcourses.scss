@@ -2,8 +2,67 @@
     
 }
 
+.box {
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 15px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    background-color: white;
+    margin-top: -31px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  h3:before,
+  h3:after {
+    background-color: #000;
+    content: "";
+    height: 1px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  
+  h3:before {
+    right: 0.5em;
+    margin-left: -33%;
+  }
+  
+  h3:after {
+    left: 0.5em;
+    margin-right: -33%;
+  }
+
 .grid-container {
     display: grid;
+    margin-top: 15px;
     grid-gap: 5px;
     padding: 5px;
 }
+
+.texto {
+    margin: 20px;
+    
+}
+
+.button2 {
+    background-color:#0938BF; 
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+  }

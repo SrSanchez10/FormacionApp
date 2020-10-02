@@ -1,6 +1,8 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import SearchIcon from '@material-ui/icons/Search';
+import './searchbar.scss';
 
 function SearchBar() {
   return (
@@ -9,7 +11,7 @@ function SearchBar() {
       options={data}
       getOptionLabel={(option) => option.name}
       style={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Buscar curso" variant="outlined" />}
+      renderInput={(params) => <TextField {...params} label={(<span className='icon'><SearchIcon /> Buscar curso </span>)} variant="outlined" />}
     />
   );
 }

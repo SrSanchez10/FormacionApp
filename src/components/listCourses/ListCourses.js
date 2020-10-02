@@ -5,32 +5,35 @@ const ListCourses = props => {
   const { elements } = props;
 
   return (
-    <div id="lista-cursos">
-      <div className="grid-container">
-        <div className="item1">
+    <div className="grid-container">
+
+      <div className="box">
+        <h3 className="curso">Curso</h3>
+        <div className="texto">
           <label className="boldText">Nombre </label>
           <label className="borderText">{elements.nombre} </label>
         </div>
-        <br></br>
-        <div className="item2"><label className="boldText">Plazas </label>
+
+        <div className="texto">
+          <label className="boldText">Plazas </label>
           <label className="borderText">{elements.plazas}</label>
         </div>
-        <br></br>
-        <div className="item3">
+
+        <div className="texto">
           <label className="boldText">Duración </label>
           <label className="borderText">{elements.duracion}</label>
         </div>
-        <br></br>
-        <div className="item4">
+
+        <div className="texto">
           <label className="boldText">Fecha de Inicio </label>
           <label className="borderText">{elements.fecha}</label>
         </div>
-        <br></br>
-        <div className="item5"><button className="button">Mas información</button></div>
-        <br></br>
-        <div className="item6"><button className="button">Inscribirme</button></div>
+
+        <button className="button2">Mas información</button>
+
+        <button className="button2">Inscribirme</button>
       </div>
-    </div>
+    </div >
 
   );
 };
