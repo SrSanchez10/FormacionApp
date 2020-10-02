@@ -1,6 +1,13 @@
-.searchbar{
+.searchBox{
+    width: 100%;
+}
 
-
+@media (min-width: 1000px) {
+    .searchBox{
+        margin-left: 30%;
+        width: 40%;
+        justify-content: center;
+    }
 }
 
 .icon{
@@ -9,3 +16,8 @@
     left: 5px;
     margin-right: 5px;
     }
+
+.searchText{
+    margin-top: -10px;
+
+}

@@ -11,8 +11,8 @@
     bottom: 0;
     margin: 0px 8px 0px 8px;
   }
-  .button {
-    background-color:#0938BF; 
+  .buttonAdd {
+    background-color:#012285; 
     border: none;
     border-radius: 12px;
     color: white;
@@ -24,10 +24,20 @@
     margin-top: -25px;
     left: 45vw;
     position: relative;
+    cursor: pointer;
+    &:hover{
+      background-color: #002baa;
+    }
   }
+
+  .buttonText{
+    margin-top: -10px;
+  }
+
   .searchdiv {
     margin: 20px;
   }
+  
   .listdiv {
     margin: 10px;
   }

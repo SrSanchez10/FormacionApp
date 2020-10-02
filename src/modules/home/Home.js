@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SearchBar from '../../components/searchBar/SearchBar';
 import ListCourses from '../../components/listCourses/ListCourses';
+import AddIcon from '@material-ui/icons/Add';
 import './home.scss';
 
 function Home(props) {
@@ -13,7 +14,7 @@ function Home(props) {
     <div className="home">
 
       <div className="searchdiv"><SearchBar /></div>
-      {userInfo.rol === 'admin' && (<div className="buttondiv"><button className="button">Añadir curso +</button></div>)}
+      {userInfo.rol === 'admin' && (<button className="buttonAdd"><div class="buttonText">Añadir curso <AddIcon className="icon"></AddIcon></div></button>)}
       <div classname="listdiv">{cursos.map((item, i) => (
         <ListCourses key={i} elements={item} />
       ))}

@@ -10,8 +10,8 @@ function SearchBar() {
       id="combo-box-demo"
       options={data}
       getOptionLabel={(option) => option.name}
-      style={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label={(<span className='icon'><SearchIcon /> Buscar curso </span>)} variant="outlined" />}
+      className="searchBox"
+      renderInput={(params) => <TextField {...params} label={(<div className="searchText"><SearchIcon className="icon" /> Buscar curso</div>)} variant="outlined" />}
     />
   );
 }
