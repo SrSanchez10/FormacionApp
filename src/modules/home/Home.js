@@ -14,7 +14,19 @@ function Home(props) {
     <div className="home">
 
       <div className="searchdiv"><SearchBar /></div>
-      {userInfo.rol === 'admin' && (<button className="buttonAdd"><div class="buttonText">Añadir curso <AddIcon className="icon"></AddIcon></div></button>)}
+      {userInfo.rol === 'admin' && (
+        <div className="grid-container">
+          <div className="boxAdd">
+            <div class="buttonDiv">
+              <button className="buttonAdd">
+                <div class="buttonText">
+                  Añadir curso
+                  <AddIcon className="icon"></AddIcon>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>)}
       <div classname="listdiv">{cursos.map((item, i) => (
         <ListCourses key={i} elements={item} />
       ))}

@@ -19,11 +19,8 @@
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: -25px;
-    left: 45vw;
     position: relative;
+    font-size: 16px;
     cursor: pointer;
     &:hover{
       background-color: #002baa;
@@ -39,7 +36,7 @@
   }
   
   .listdiv {
-    margin: 10px;
+    margin: 20px;
   }
 
   .grid-container2 {
@@ -59,4 +56,30 @@
     padding: 6px 20px;
 
   }
+
+  .icon{
+    position: relative;
+    top: 6px;
+    left: 5px;
+    margin-right: 5px;
+    }
+
+  .buttonDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boxAdd {
+    margin-top: 10px;
+    border: 2px dashed gray;
+    border-radius: 12px;
+    padding: 15px;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
 }
