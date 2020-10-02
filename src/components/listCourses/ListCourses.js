@@ -9,29 +9,23 @@ const ListCourses = props => {
 
       <div className="box">
         <h3 className="curso">Curso</h3>
-        <div className="texto">
-          <label className="boldText">Nombre </label>
-          <label className="borderText">{elements.nombre} </label>
+        <div className="item-list">
+
+          <label className="label">Nombre </label>
+          <label className="output">{elements.nombre} </label>
+
+          <label className="label">Plazas </label>
+          <label className="output">{elements.plazas}</label>
+
+          <label className="label">Duración </label>
+          <label className="output">{elements.duracion}</label>
+
+          <label className="label">Fecha de Inicio </label>
+          <label className="output">{elements.fecha}</label>
+
+          <button className="button-list">Mas información</button>
+          <button className="button-list">Inscribirme</button>
         </div>
-
-        <div className="texto">
-          <label className="boldText">Plazas </label>
-          <label className="borderText">{elements.plazas}</label>
-        </div>
-
-        <div className="texto">
-          <label className="boldText">Duración </label>
-          <label className="borderText">{elements.duracion}</label>
-        </div>
-
-        <div className="texto">
-          <label className="boldText">Fecha de Inicio </label>
-          <label className="borderText">{elements.fecha}</label>
-        </div>
-
-        <button className="button2">Mas información</button>
-
-        <button className="button2">Inscribirme</button>
       </div>
     </div >
 
