@@ -7,7 +7,10 @@ function AddCourse(props) {
 
   return (
     <div className="addcourse">
-      <form>
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+        }}>
         <div className="item-list">
           <span className="add_course_span">Nombre: </span>
           <input className="add_course_input"></input>
