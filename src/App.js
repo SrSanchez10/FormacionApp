@@ -3,6 +3,7 @@ import './app.scss';
 import Header from './components/header/Header';
 import Home from './modules/home/Home';
 import Login from './modules/login/Login';
+import AddCourse from './modules/addCourse/AddCourse';
 import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -33,6 +34,10 @@ function App(props) {
           </Route>
           <PrivateRoute path="/" exact={true}>
             <Home
+              userInfo={userInfo} />
+          </PrivateRoute>
+          <PrivateRoute path="/add-course">
+            <AddCourse
               userInfo={userInfo} />
           </PrivateRoute>
           <Route path="/not-allowed">

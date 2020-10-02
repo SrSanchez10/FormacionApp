@@ -5,6 +5,7 @@ import ListCourses from '../../components/listCourses/ListCourses';
 import AddIcon from '@material-ui/icons/Add';
 import './home.scss';
 
+
 function Home(props) {
 
   const { userInfo } = props;
@@ -18,7 +19,7 @@ function Home(props) {
         <div className="grid-container">
           <div className="boxAdd">
             <div class="buttonDiv">
-              <button className="buttonAdd">
+              <button className="buttonAdd" onClick={() => (window.location = '/add-course')}>
                 <div class="buttonText">
                   Añadir curso
                   <AddIcon className="icon"></AddIcon>
