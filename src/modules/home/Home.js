@@ -14,7 +14,7 @@ function Home(props) {
 
       <div className="searchdiv"><SearchBar /></div>
       {userInfo.rol === 'admin' && (<div className="buttondiv"><button className="button">Añadir curso +</button></div>)}
-      <div classname="listdiv">{cursos.map((item, i) => (
+      <div className="listdiv">{cursos.map((item, i) => (
         <ListCourses key={i} elements={item} />
       ))}
       </div>
