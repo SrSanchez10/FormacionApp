@@ -1,39 +1,20 @@
 import { fetch } from '../../server';
 
-export const FIND_WALKS_REQUEST = 'FIND_WALKS_REQUEST';
-export const FIND_WALKS_RESPONSE = 'FIND_WALKS_RESPONSE';
-export const FIND_FRIENDS_REQUEST = 'FIND_FRIENDS_REQUEST';
-export const FIND_FRIENDS_RESPONSE = 'FIND_FRIENDS_RESPONSE';
+export const FIND_COURSES_REQUEST = 'FIND_COURSES_REQUEST';
+export const FIND_COURSES_RESPONSE = 'FIND_COURSES_RESPONSE';
 
-export const findWalks = () => {
+export const findCourses = () => {
   return dispatch => {
     dispatch({
-      type: FIND_WALKS_REQUEST
+      type: FIND_COURSES_REQUEST
     });
 
-    fetch('/walks')
+    fetch('/courses')
       .then(response => response.json())
-      .then(walks => {
+      .then(courses => {
         dispatch({
-          type: FIND_WALKS_RESPONSE,
-          walks
-        });
-      });
-  };
-};
-
-export const findUserFriends = user => {
-  return dispatch => {
-    dispatch({
-      type: FIND_FRIENDS_REQUEST
-    });
-
-    fetch('/friends?user=' + user)
-      .then(response => response.json())
-      .then(friends => {
-        dispatch({
-          type: FIND_FRIENDS_RESPONSE,
-          friends
+          type: FIND_COURSES_RESPONSE,
+          courses
         });
       });
   };

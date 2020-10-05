@@ -50,7 +50,7 @@ function Header(props) {
           <span className="icon">
             <CreateIcon></CreateIcon>
           </span>
-          Listado cursos
+          <a href="/">Listado cursos</a>
         </div>
         <div className="item">
           <span className="icon">

@@ -3,44 +3,58 @@ import { connect } from 'react-redux';
 import SearchBar from '../../components/searchBar/SearchBar';
 import ListCourses from '../../components/listCourses/ListCourses';
 import AddIcon from '@material-ui/icons/Add';
+import { findCourses } from './actions';
 import './home.scss';
 
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userInfo: props
+    };
+  }
 
-function Home(props) {
 
-  const { userInfo } = props;
-  const cursos = [{ nombre: 'React', plazas: '12', duracion: '24', fecha: '22/09/2020' }, { nombre: 'React', plazas: '12', duracion: '24', fecha: '22/09/2020' }];
+  componentDidMount() {
+    // Cargar la info del servidor
+    this.props.findCourses();
+  }
 
-  return (
-    <div className="home">
+  render() {
+    return (
+      <div className="home">
 
-      <div className="searchdiv"><SearchBar /></div>
-      {userInfo.rol === 'admin' && (
-        <div className="grid-container">
-          <div className="boxAdd">
-            <div class="buttonDiv">
-              <button className="buttonAdd" onClick={() => (window.location = '/add-course')}>
-                <div class="buttonText">
-                  Añadir curso
-                  <AddIcon className="icon"></AddIcon>
-                </div>
-              </button>
+        <div className="searchdiv"><SearchBar /></div>
+        {this.state.userInfo.rol === 'admin' && (
+          <div className="grid-container">
+            <div className="boxAdd">
+              <div class="buttonDiv">
+                <button className="buttonAdd" onClick={() => (window.location = '/add-course')}>
+                  <div class="buttonText">
+                    Añadir curso
+                    <AddIcon className="icon"></AddIcon>
+                  </div>
+                </button>
+              </div>
             </div>
-          </div>
-        </div>)}
-      <div classname="listdiv">{cursos.map((item, i) => (
-        <ListCourses key={i} elements={item} />
-      ))}
-      </div>
+          </div>)}
+        <div className="listdiv">{this.props.courses.map((item, i) => (
+          <ListCourses key={i} elements={item} />
+        ))}
+        </div>
 
-    </div>
-  );
+      </div>
+    );
+  }
 
 }
 
 export default connect(
   store => ({
-    userInfo: store.login.userInfo
+    userInfo: store.login.userInfo,
+    courses: store.home.courses
   }),
-  null
+  dispatch => ({
+    findCourses: () => dispatch(findCourses()),
+  })
 )(Home);

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "React",
+    "plazas": 12,
+    "duracion": 24,
+    "fecha": "22/09/2020"
+  },
+  {
+    "id": 2,
+    "nombre": "React2",
+    "plazas": 12,
+    "duracion": 24,
+    "fecha": "22/10/2020"
+  }
+]

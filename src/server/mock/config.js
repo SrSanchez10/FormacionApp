@@ -1,5 +1,6 @@
 import userInfo from './data/user_info.json';
 import adminInfo from './data/user_info_admin.json';
+import courses from './data/courses.json';
 
 export const serverMockConfig = {
   endpoints: {
@@ -12,6 +13,11 @@ export const serverMockConfig = {
         }
 
         return 'pepe' === credentials.login ? adminInfo : userInfo;
+      }
+    },
+    '/courses': {
+      GET: () => {
+        return courses;
       }
     }
   }
