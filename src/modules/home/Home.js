@@ -25,7 +25,7 @@ class Home extends React.Component {
       <div className="home">
 
         <div className="searchdiv"><SearchBar /></div>
-        {this.state.userInfo.rol === 'admin' && (
+        {this.props.userInfo.rol === 'admin' && (
           <div className="grid-container">
             <div className="boxAdd">
               <div class="buttonDiv">
