@@ -11,7 +11,7 @@ function AddCourse(props) {
         onSubmit={e => {
           e.preventDefault();
         }}>
-        <div className="item-list">
+        <div className="item-list-add-course">
           <span className="add_course_span">Nombre: </span>
           <input className="add_course_input" placeholder="Por Ejemplo: Comenzando con React"></input>
           <span className="add_course_span">Descripción: </span>

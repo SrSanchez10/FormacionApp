@@ -5,6 +5,17 @@
 
 }
 
+.item-list-add-course {
+    display: grid;
+    padding: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 400px;
+    padding: 1em;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 10px;
+}
+
 .add_course_span {
     font-weight: bold;
     padding: 0.5em 0.5em 0.5em 0;
