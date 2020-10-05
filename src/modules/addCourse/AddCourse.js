@@ -38,9 +38,13 @@ function AddCourse(props) {
           <input className="add_course_input" placeholder="Por Ejemplo: 24"></input>
           <span className="add_course_span">Oficina a la pertenece: </span>
           <input className="add_course_input " placeholder="Por Ejemplo: A Coruña"></input>
+          <label className="add_course_label" for="tipo_formacion">Tipo de formación:</label>
+          <select className="add_course_select" name="tipo_formacion">
+            <option value="presencial">Presencial</option>
+            <option value="teleformacion">Teleformación</option>
+            <option value="mixta">Mixta</option>
+          </select>
 
-          <span className="add_course_span">Tipo de formación: </span>
-          <input className="add_course_input " placeholder="Por Ejemplo: presencial/teleformación/mixta"></input>
           <label className="add_course_label" for="formacion">Elija formación:</label>
 
           <select className="add_course_select" name="formacion">
