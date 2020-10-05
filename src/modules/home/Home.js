@@ -25,22 +25,23 @@ class Home extends React.Component {
       <div className="home">
 
         <div className="searchdiv"><SearchBar /></div>
-        {this.props.userInfo.rol === 'admin' && (
-          <div className="grid-container">
-            <div className="boxAdd">
-              <div class="buttonDiv">
-                <button className="buttonAdd" onClick={() => (window.location = '/add-course')}>
-                  <div class="buttonText">
-                    Añadir curso
-                    <AddIcon className="icon"></AddIcon>
-                  </div>
-                </button>
+        <div className="listdiv">
+          {this.props.userInfo.rol === 'admin' && (
+            <div className="grid-container">
+              <div className="boxAdd">
+                <div class="buttonDiv">
+                  <button className="buttonAdd" onClick={() => (window.location = '/add-course')}>
+                    <div class="buttonText">
+                      Añadir curso
+                      <AddIcon className="icon"></AddIcon>
+                    </div>
+                  </button>
+                </div>
               </div>
-            </div>
-          </div>)}
-        <div className="listdiv">{this.props.courses.map((item, i) => (
-          <ListCourses key={i} elements={item} />
-        ))}
+            </div>)}
+          {this.props.courses.map((item, i) => (
+            <ListCourses key={i} elements={item} />
+          ))}
         </div>
 
       </div>
